@@ -13,8 +13,8 @@ public class MenuUtil {
     static AnimalService animalService = new AnimalService();
 
     public static void menu() {
+        Scanner sc = new Scanner(System.in);
         while (true) {
-            Scanner sc = new Scanner(System.in);
             System.out.println("Hello, welcome to PARK-ZOO!");
             String textBlock = """
                     Select the category you are interested in!
@@ -24,8 +24,8 @@ public class MenuUtil {
                     """;
             System.out.println(textBlock);
             int num = sc.nextInt();
+            sc.nextLine();
             if (num == 1) {
-                sc = new Scanner(System.in);
                 String textBlockForAquatic = """
                         1 -> to add aquatic carnivorous
                         2 -> to see a list of aquatic carnivores
@@ -34,15 +34,16 @@ public class MenuUtil {
                         """;
                 System.out.println(textBlockForAquatic);
                 int aquaticCategory = sc.nextInt();
+                sc.nextLine();
                 switch (aquaticCategory) {
                     case 1:
-                        animalService.addAquaticCarnivorous();
+                        animalService.addAquaticCarnivorous(sc);
                         break;
                     case 2:
                         animalService.getAllAquaticCarnivorous();
                         break;
                     case 3:
-                        animalService.addAquaticNonCarnivorous();
+                        animalService.addAquaticNonCarnivorous(sc);
                         break;
                     case 4:
                         animalService.getAllAquaticNonCarnivorous();
@@ -51,7 +52,6 @@ public class MenuUtil {
                         break;
                 }
             } else if (num == 2) {
-                sc = new Scanner(System.in);
                 String textBlockForTerrestrial = """
                         1 -> to add terrestrial carnivorous
                         2 -> to see a list of terrestrial carnivores
@@ -60,15 +60,16 @@ public class MenuUtil {
                         """;
                 System.out.println(textBlockForTerrestrial);
                 int terrestrialCategory = sc.nextInt();
+                sc.nextLine();
                 switch (terrestrialCategory) {
                     case 1:
-                        animalService.addATerrestrialCarnivorous();
+                        animalService.addATerrestrialCarnivorous(sc);
                         break;
                     case 2:
                         animalService.getAllTerrestrialCarnivorous();
                         break;
                     case 3:
-                        animalService.addATerrestrialNonCarnivorous();
+                        animalService.addATerrestrialNonCarnivorous(sc);
                         break;
                     case 4:
                         animalService.getAllTerrestrialNonCarnivorous();
