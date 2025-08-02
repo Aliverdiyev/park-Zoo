@@ -11,8 +11,7 @@ import java.util.Scanner;
 import static db.Database.*;
 
 public class AnimalService {
-    public void addAquaticCarnivorous() {
-        Scanner scanner = new Scanner(System.in);
+    public void addAquaticCarnivorous(Scanner scanner) {
         System.out.println("Enter the type: ");
         String spec = scanner.nextLine();
         System.out.println("Enter the age: ");
@@ -31,8 +30,7 @@ public class AnimalService {
         System.out.println();
     }
 
-    public void addAquaticNonCarnivorous() {
-        Scanner scanner = new Scanner(System.in);
+    public void addAquaticNonCarnivorous(Scanner scanner) {
         System.out.println("Enter the type: ");
         String spec = scanner.nextLine();
         System.out.println("Enter the age: ");
@@ -51,8 +49,7 @@ public class AnimalService {
         System.out.println();
     }
 
-    public void addATerrestrialCarnivorous() {
-        Scanner scanner = new Scanner(System.in);
+    public void addATerrestrialCarnivorous(Scanner scanner) {
         System.out.println("Enter the type:  ");
         String spec = scanner.nextLine();
         System.out.println("Enter the age: ");
@@ -74,8 +71,7 @@ public class AnimalService {
         System.out.println();
     }
 
-    public void addATerrestrialNonCarnivorous() {
-        Scanner scanner = new Scanner(System.in);
+    public void addATerrestrialNonCarnivorous(Scanner scanner) {
         System.out.println("Enter the type:  ");
         String spec = scanner.nextLine();
         System.out.println("Enter the age: ");
